@@ -1,0 +1,51 @@
+This project is a Python implementation of a word search solver. The program reads a list of words and a matrix of
+ letters, then finds and counts the occurrences of the words within the matrix in various directions.
+
+**Features**
+Word Reading: Reads words from a specified file.
+Matrix Reading: Reads a matrix of letters from a specified file.
+Directional Search: Searches for words in the matrix in multiple directions: right, left, up, down, and diagonals.
+Results Output: Writes the search results to an output file.
+
+**Files**
+wordsearch.py: The main program file that contains all the functions for reading files, searching the matrix,
+ and writing results.
+How to Run
+Ensure you have Python installed on your system.
+Download wordsearch.py.
+Prepare a word list file and a matrix file in the appropriate format.
+Run the program using the following command:
+bash
+Copy code
+python wordsearch.py <word_list_file> <matrix_file> <output_file> <search_directions>
+
+**Functions Overview**
+read_wordlist(filename): Reads words from the specified file.
+read_matrix(filename): Reads a matrix of letters from the specified file.
+reverse_matrix(matrix_lst): Reverses the rows of the matrix.
+transpose_matrix(matrix_lst): Transposes the matrix.
+up_right_diagonal(matrix_lst): Extracts diagonals from bottom-left to top-right.
+down_right_diagonal(matrix_lst): Extracts diagonals from top-left to bottom-right.
+search_words_and_count(words, matrix_lst, good_words_lst): Searches for words in the matrix and counts their occurrences.
+update_dict(current_dict, final_dict): Updates the final dictionary with counts from the current dictionary.
+dictionary_to_list(f_dict): Converts the dictionary to a list of tuples.
+right_search(matrix_lst, words): Searches for words in the right direction.
+left_search(matrix_lst, words): Searches for words in the left direction.
+up_search(matrix_lst, words): Searches for words in the up direction.
+down_search(matrix_lst, words): Searches for words in the down direction.
+up_right_search(matrix_lst, words): Searches for words in the up-right diagonal direction.
+down_left_search(matrix_lst, words): Searches for words in the down-left diagonal direction.
+down_right_search(matrix_lst, words): Searches for words in the down-right diagonal direction.
+up_left_search(matrix_lst, words): Searches for words in the up-left diagonal direction.
+finale_directions(directions): Removes duplicate directions from the input string.
+find_words(word_list, matrix, directions): Finds and counts words in the matrix based on the given directions.
+write_output(results, filename): Writes the search results to the specified output file.
+main(): Main function to run the program.
+
+**Example Usage**
+To find words in a matrix using the word list from words.txt and the matrix from matrix.txt, and output the results
+ to output.txt while searching in all directions, use the following command:
+
+bash
+Copy code
+python wordsearch.py words.txt matrix.txt output.txt udrlwxyz
